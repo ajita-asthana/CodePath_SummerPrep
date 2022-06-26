@@ -1,4 +1,4 @@
-package session1;
+package Week1.session1;
 import java.io.*;
 
 public class session_1 {
