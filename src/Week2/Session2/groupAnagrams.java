@@ -18,7 +18,7 @@ public class groupAnagrams {
                 map.put(key, new ArrayList<>());
             map.get(key).add(strs);
         }
-        List<List<String>> res = new ArrayList<>(map.values());
-        
+        //List<List<String>> res = new ArrayList<>(map.values());
+
     }
 }
