@@ -44,7 +44,7 @@ public class longestCommonSub {
                 if(checkRepeat(s, i, j))
                 {
                     res = Math.max(res, j-i+1);
-                   String s = resultSubString(s, i, j);
+                    subStr = resultSubString(s, i, j);
                 }
                 else
                     break;
