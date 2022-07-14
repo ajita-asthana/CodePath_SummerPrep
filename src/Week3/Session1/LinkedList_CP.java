@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class LinkedList_CP {
-    public  Node head;
+    public Node head;
 
     public LinkedList_CP(){
         Node head = new Node(0);
