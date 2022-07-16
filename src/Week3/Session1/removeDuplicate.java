@@ -6,11 +6,12 @@ public class removeDuplicate {
     public static void main(String args[])throws Exception{
         BufferedReader ob = new BufferedReader(new InputStreamReader(System.in));
         LinkedList_CP linkedLst = new LinkedList_CP();
+        linkedLst.addAtTail(0);
         linkedLst.addAtTail(1);
         linkedLst.addAtTail(2);
-        linkedLst.addAtTail(3);
-        linkedLst.addAtTail(4);
-        linkedLst.addAtTail(5);
+//        linkedLst.addAtTail(3);
+//        linkedLst.addAtTail(4);
+//        linkedLst.addAtTail(5);
         linkedLst.printLinkedLst(linkedLst.head);
         Node dummy = new Node(0);
         dummy.next = linkedLst.head;
@@ -33,19 +34,34 @@ public class removeDuplicate {
 //            curr = curr.next;
 //        }
 //        linkedLst.printLinkedLst(dummy.next);
+        //Node curr = linkedLst.head;
+//        while(linkedLst.head != null && linkedLst.head.next != null)
+//        {
+//            Node firstnode = linkedLst.head;
+//            Node secondNode = linkedLst.head.next;
+//
+//            prev.next = secondNode;
+//            firstnode.next = secondNode.next;
+//            secondNode.next = firstnode;
+//
+//            linkedLst.head = firstnode.next;
+//            prev = firstnode;
+//        }
+        //linkedLst.printLinkedLst(dummy.next);
 
-        while(linkedLst.head != null && linkedLst.head.next != null)
+        for(int i=0; i<4; i++)
         {
-            Node firstnode = linkedLst.head;
-            Node secondNode = linkedLst.head.next;
-
-            prev.next = secondNode;
-            firstnode.next = secondNode.next;
-            secondNode.next = firstnode;
-
-            linkedLst.head = firstnode.next;
-            prev = firstnode;
+            Node curr = linkedLst.head;
+            Node pred = linkedLst.head;
+            while(curr.next != null)
+            {
+                pred =curr;
+                curr = curr.next;
+            }
+            pred.next = null;
+            curr.next = linkedLst.head;
+            linkedLst.head = curr;
         }
-        linkedLst.printLinkedLst(dummy.next);
+        linkedLst.printLinkedLst(linkedLst.head);
     }
 }
