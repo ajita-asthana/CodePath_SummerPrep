@@ -2,9 +2,9 @@ package Week3.Session1;
 import java.io.*;
 
 public class Node {
-    int val;
-    Node next = null;
-    Node(int val) {
+    public int val;
+    public Node next = null;
+    public Node(int val) {
         this.val = val;
     }
 
