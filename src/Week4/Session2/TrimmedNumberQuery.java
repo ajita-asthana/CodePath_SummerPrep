@@ -62,6 +62,6 @@ public class TrimmedNumberQuery {
         }
         for(int x : answer)
             System.out.print(x+" ");
-        
+
     }
 }
